@@ -12,7 +12,8 @@ export default function Home() {
       .get(`${import.meta.env.VITE_BACKEND_URL}/gifs?q=${query}`)
       .then((response) => {
         setData(response.data);
-        console.info(response.data, query);
+        console.info("data: ", response.data.data);
+        console.info("query: ", query);
       })
       .catch((error) => {
         console.error(error);
